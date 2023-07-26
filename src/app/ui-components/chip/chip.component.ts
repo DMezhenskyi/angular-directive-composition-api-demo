@@ -2,12 +2,11 @@ import {
   ChangeDetectionStrategy,
   Component,
   EventEmitter,
-  HostBinding,
-  HostListener,
   Input,
   Output,
 } from '@angular/core';
-import { CommonModule, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { BaseComponent } from '../base-component';
 
 @Component({
   selector: 'app-chip',
@@ -22,39 +21,7 @@ import { CommonModule, NgIf } from '@angular/common';
   styleUrls: ['./chip.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChipComponent {
-  @Input()
-  appearance: 'solid' | 'stroked' = 'solid';
-
-  @Input()
-  color: 'primary' | 'secondary' = 'primary';
-
-  @HostBinding('class')
-  protected get computedHostClasses() {
-    return {
-      [`df-${[this.appearance]}`]: true,
-      [`df-${[this.color]}`]: true,
-    };
-  }
-
-  @Input()
-  @HostBinding('class.disabled')
-  disabled = false;
-
-  @HostBinding('attr.disabled')
-  protected get nativeDisabled(): '' | null {
-    return this.disabled ? '' : null;
-  }
-
-  @HostListener('click', ['$event'])
-  @HostListener('dblclick', ['$event'])
-  onClick(e: Event) {
-    if (this.disabled) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-    }
-  }
-
+export class ChipComponent extends BaseComponent {
   @Input()
   removable = false;
 
