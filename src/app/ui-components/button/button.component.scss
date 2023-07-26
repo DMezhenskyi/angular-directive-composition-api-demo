@@ -1,3 +1,29 @@
 :host {
-  display: block;
+  display: inline-flex;
+  padding: 7px 13px;
+  align-items: center;
+  box-sizing: border-box;
+  border: solid 2px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-radius 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  &.df-solid {
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  &.df-stroked {
+    background-color: transparent;
+    border-color: var(--bg-color);
+    color: var(--bg-color);
+  }
+  &:disabled,
+  &.disabled {
+    opacity: 0.6;
+  }
 }
