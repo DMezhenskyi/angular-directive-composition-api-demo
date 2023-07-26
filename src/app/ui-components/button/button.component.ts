@@ -5,7 +5,6 @@ import {
   HostListener,
   Input,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'button[dfButton], a[dfButton]',
