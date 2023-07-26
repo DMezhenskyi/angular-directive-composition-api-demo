@@ -17,18 +17,4 @@ import {
   styleUrls: ['./banner.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BannerComponent {
-  @Input()
-  appearance: 'solid' | 'stroked' = 'solid';
-
-  @Input()
-  color: 'primary' | 'secondary' = 'primary';
-
-  @HostBinding('class')
-  protected get computedHostClasses() {
-    return {
-      [`df-${[this.appearance]}`]: true,
-      [`df-${[this.color]}`]: true,
-    };
-  }
-}
+export class BannerComponent {}
