@@ -4,14 +4,18 @@
   <button canColor canDisable canAppearance dfButton [appearance]="'stroked'">Stroked Button</button>
   
   <h3>Chip</h3>
-  <app-chip canColor canDisable canAppearance [appearance]="'stroked'" [removable]="true">Angular</app-chip>
-  <app-chip canColor canDisable canAppearance [appearance]="'solid'" [removable]="true">Svelte</app-chip>
+  <app-chip canColor canDisable canAppearance [appearance]="'stroked'" [removable]="true">Solid Chip</app-chip>
+  <app-chip canColor canDisable canAppearance [appearance]="'solid'" [removable]="true">Stroked Chip</app-chip>
   
   <h3>Banner</h3>
-  <app-banner canColor canAppearance [color]="'primary'" [appearance]="'stroked'">
+  <app-banner canColor canAppearance [appearance]="'solid'">
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
-      facere.
+      This is a demo text for a banner which has SOLID appearance 
+    </p>
+  </app-banner>
+  <app-banner canColor canAppearance [appearance]="'stroked'">
+    <p>
+      This is a demo text for a banner which has STROKED appearance
     </p>
   </app-banner>
 </main>
