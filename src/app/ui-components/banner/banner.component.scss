@@ -1,12 +1,18 @@
 :host {
   display: block;
-  padding: 5px 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
   border-radius: 20px;
   background-color: var(--bg-color);
   color: var(--text-color);
   border: solid 2px;
   box-shadow: #00000029 0px 2px 4px 3px;
+
+  h5 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 20px;
+  }
 
   &.df-solid {
     background-color: var(--bg-color);

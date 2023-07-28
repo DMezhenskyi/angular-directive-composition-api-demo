@@ -1,26 +1,14 @@
 <main>
+  <h3>Button</h3>
   <button canColor canDisable canAppearance dfButton>Solid Button</button>
-  <button canColor canDisable canAppearance dfButton appearance="stroked">
-    Stroked Button
-  </button>
-  <app-chip canColor canDisable canAppearance [appearance]="'stroked'"
-    >Angular</app-chip
-  >
-  <app-chip
-    canColor
-    canDisable
-    canAppearance
-    [appearance]="'solid'"
-    [removable]="true"
-    >Svelte</app-chip
-  >
-  <app-banner canColor canAppearance color="secondary" appearance="solid">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
-      facere.
-    </p>
-  </app-banner>
-  <app-banner canColor canAppearance color="primary" appearance="stroked">
+  <button canColor canDisable canAppearance dfButton [appearance]="'stroked'">Stroked Button</button>
+  
+  <h3>Chip</h3>
+  <app-chip canColor canDisable canAppearance [appearance]="'stroked'" [removable]="true">Angular</app-chip>
+  <app-chip canColor canDisable canAppearance [appearance]="'solid'" [removable]="true">Svelte</app-chip>
+  
+  <h3>Banner</h3>
+  <app-banner canColor canAppearance [color]="'primary'" [appearance]="'stroked'">
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
       facere.

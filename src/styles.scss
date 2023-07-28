@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
 .df-primary {
   --bg-color: #4378db;
   --text-color: #faf0e6;
