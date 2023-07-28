@@ -1,15 +1,14 @@
 <main>
+  <h3>Button</h3>
   <button dfButton>Solid Button</button>
-  <button dfButton appearance="stroked">Stroked Button</button>
-  <app-chip [appearance]="'stroked'" [removable]="true">Angular</app-chip>
-  <app-chip [appearance]="'solid'" [removable]="true">Svelte</app-chip>
-  <app-banner color="secondary" appearance="solid">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
-      facere.
-    </p>
-  </app-banner>
-  <app-banner color="primary" appearance="stroked">
+  <button dfButton [appearance]="'stroked'">Stroked Button</button>
+
+  <h3>Chip</h3>
+  <app-chip [appearance]="'solid'" [removable]="true">Angular</app-chip>
+  <app-chip [appearance]="'stroked'" [removable]="true">Svelte</app-chip>
+  
+  <h3>Banner</h3>
+  <app-banner [color]="'primary'" [appearance]="'stroked'">
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
       facere.
