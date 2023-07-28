@@ -1,9 +1,6 @@
 import {
   ChangeDetectionStrategy,
-  Component,
-  HostBinding,
-  HostListener,
-  Input,
+  Component
 } from '@angular/core';
 
 @Component({
