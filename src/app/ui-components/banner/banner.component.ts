@@ -9,7 +9,7 @@ import {
   selector: 'app-banner',
   standalone: true,
   template: `
-    <h3>Notification:</h3>
+    <h5>Notification:</h5>
     <div class="banner-content">
       <ng-content></ng-content>
     </div>
