@@ -1,8 +1,10 @@
 import { Directive, HostBinding, HostListener, Input } from '@angular/core';
+import { CanPreventDefaultDirective } from './can-prevent-default.directive';
 
 @Directive({
   selector: '[canDisable]',
   standalone: true,
+  hostDirectives: [CanPreventDefaultDirective]
 })
 export class CanDisableDirective {
   @Input()
@@ -14,12 +16,4 @@ export class CanDisableDirective {
     return this.disabled ? '' : null;
   }
 
-  @HostListener('click', ['$event'])
-  @HostListener('dblclick', ['$event'])
-  onClick(e: Event) {
-    if (this.disabled) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-    }
-  }
 }
