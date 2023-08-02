@@ -1,12 +1,16 @@
-import { Directive, HostBinding, HostListener, Input } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 import { CanPreventDefaultDirective } from './can-prevent-default.directive';
 
 @Directive({
   selector: '[canDisable]',
   standalone: true,
-  hostDirectives: [CanPreventDefaultDirective]
+  hostDirectives: [{
+    directive: CanPreventDefaultDirective,
+    inputs: ['disabled']
+  }]
 })
 export class CanDisableDirective {
+
   @Input()
   @HostBinding('class.disabled')
   disabled = false;

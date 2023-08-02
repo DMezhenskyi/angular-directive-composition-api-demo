@@ -1,26 +1,19 @@
-import { Directive, HostListener, inject } from '@angular/core';
-import { CanDisableDirective } from './can-disable.directive';
+import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appCanPreventDefault]',
   standalone: true
 })
 export class CanPreventDefaultDirective {
-
-  canDisableDir = inject(CanDisableDirective);
+  @Input()
+  disabled = false;
 
   @HostListener('click', ['$event'])
   @HostListener('dblclick', ['$event'])
   onClick(e: Event) {
-    if (this.canDisableDir.disabled) {
+    if (this.disabled) {
       e.preventDefault();
       e.stopImmediatePropagation();
     }
   }
-
-  constructor() { 
-    console.trace(this.canDisableDir);
-    
-  }
-
 }
